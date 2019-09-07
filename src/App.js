@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import './App.css';
-import {UserOutput} from "./UserOutput/UserOutput"
+import './App.css'
+import UserOutput from "./UserOutput/UserOutput"
+import UserInput from "./UserInput/UserInput"
 
 // • Create TWO new components: UserInput and UserOutput
 // •  UserInput should hold an input element, UserOutput two paragraphs
@@ -15,10 +16,28 @@ import {UserOutput} from "./UserOutput/UserOutput"
 
 
 class App extends Component {
+
+  state = {
+    userName : "Lunar Tick"
+  }
+
+  changeUserNameHandler = (event) => {
+    this.setState({
+      userName: event.target.value
+    })
+  }
+
+
   render () {
   return (
-    <div>
-      <UserOutput/>
+    <div className = "App">
+      <UserOutput> {this.state.userName} </UserOutput>
+      {/* <UserOutput> </UserOutput> */}
+      <UserInput 
+      changed = {this.changeUserNameHandler} 
+      value = {this.state.userName}>
+      
+       </UserInput> 
     </div>
   );
   }

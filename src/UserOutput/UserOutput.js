@@ -4,8 +4,8 @@ import "./UserOutput.css";
 const UserOutput = (props) => {
     return (
     <div className = "useroutput">
-        <p></p>
-        <p></p>
+        <p>{props.children}</p>
+        <p> This will be overwritten</p>
     </div>
     )
 }

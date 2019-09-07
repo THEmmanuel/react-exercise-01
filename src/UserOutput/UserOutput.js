@@ -9,3 +9,5 @@ const UserOutput = (props) => {
     </div>
     )
 }
+
+export default UserOutput;

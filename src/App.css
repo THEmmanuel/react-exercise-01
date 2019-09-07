@@ -1,3 +1,11 @@
 .App {
   text-align: center;
 }
+
+.fields {
+  padding: 15px;
+  width: 60%;
+  text-align: center;
+  box-shadow: 0 2px 3px #ccc;
+  margin: 18px auto;
+}

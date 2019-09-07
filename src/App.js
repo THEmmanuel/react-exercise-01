@@ -31,13 +31,15 @@ class App extends Component {
   render () {
   return (
     <div className = "App">
+      <div className = "fields">
       <UserOutput> {this.state.userName} </UserOutput>
       {/* <UserOutput> </UserOutput> */}
       <UserInput 
       changed = {this.changeUserNameHandler} 
       value = {this.state.userName}>
       
-       </UserInput> 
+       </UserInput>
+       </div> 
     </div>
   );
   }
